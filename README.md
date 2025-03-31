@@ -117,7 +117,7 @@ No contiene lógica de implementación.
 
 Implementa los repositorios, API calls, y almacenamiento local.
 
-presentation (Presentación)
+`presentation (Presentación)`
 
 Contiene las páginas, componentes y ViewModels.
 
