@@ -1,0 +1,9 @@
+<ion-content [fullscreen]="true" style="--background: #9cadce;">
+
+  <h1 class="header">Catbreeds</h1>
+  <div class="div-container">
+    <app-search (onChangeText)="handleSearch($event)"></app-search>
+    <app-card *ngFor="let cat of filteredCats" [cat]="cat" (onMoreClick)="handleMore($event)"></app-card>
+  </div>
+
+</ion-content>

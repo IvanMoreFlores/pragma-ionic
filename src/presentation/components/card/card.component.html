@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-header">
+    <div class="name">
+      <h3>{{ cat.name }}</h3>
+    </div>
+    <div class="more" (click)="handleMoreClick()">Más..</div>
+  </div>
+  <div class="card-image">
+    <img [src]="getImageUrl()" [alt]="cat.name" />
+  </div>
+  <div class="card-footer">
+    <div class="country">
+      <h5>{{ cat.origin }}</h5>
+    </div>
+    <div class="weight">
+      <ng-container *ngFor="let _ of createArray(cat.intelligence)">
+        <img src="assets/img/bombilla.png" alt="Inteligencia" class="logo" />
+      </ng-container>
+    </div>
+  </div>
+</div>

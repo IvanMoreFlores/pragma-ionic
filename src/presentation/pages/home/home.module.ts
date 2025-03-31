@@ -5,15 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { SearchComponent } from 'src/presentation/components/search/search.component';
+import { CardComponent } from 'src/presentation/components/card/card.component';
 
 @NgModule({
+  declarations: [HomePage, SearchComponent, CardComponent], // Aquí van los componentes
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule, // Se mantiene IonicModule
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  exports: [SearchComponent, CardComponent] // Exportarlo si se usará en otro módulo
 })
 export class HomePageModule {}
+

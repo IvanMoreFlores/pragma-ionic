@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true" style="--background: #f8f9fa;">
+  <div class="container">
+    <div class="image-container">
+      <button class="close-button" (click)="goBack()">
+        ✖
+      </button>
+      <img *ngIf="cat" [src]="cat.imageUrl" [alt]="cat.name" />
+    </div>
+    <div class="data-container">
+      <h1>{{ cat?.name }}</h1>
+      <p><strong>Origen:</strong> {{ cat?.origin }}</p>
+      <p><strong>Descripción:</strong> {{ cat?.description }}</p>
+      <p><strong>Temperamento:</strong> {{ cat?.temperament }}</p>
+      <p><strong>Esperanza de vida:</strong> {{ cat?.life_span }} años</p>
+      <p><strong>Inteligencia:</strong> {{ cat?.intelligence }}</p>
+    </div>
+  </div>
+</ion-content>
